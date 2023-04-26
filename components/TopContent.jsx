@@ -8,9 +8,7 @@ const TopContent = () => {
       <div className="barge flex justify-between item-center mt-10">
         <Image src={avatar} alt={"Bear"} height="165" width="165" />
       </div>
-      <div className="h1 barge flex justify-between item-center ">
-        Mat Gargano
-      </div>
+      <div className="h1 barge flex justify-between item-center ">{name}</div>
     </div>
   );
 };

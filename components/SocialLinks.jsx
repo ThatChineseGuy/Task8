@@ -6,6 +6,8 @@ import snapchat from "../images/snapchat.svg";
 import twitter from "../images/twitter.svg";
 
 const SocialLinks = () => {
+  const link = getSocialLinks(1);
+
   return (
     <div className="barge flex justify-between item-center mt-10">
       <Image src={snapchat} alt={"snapchat"} height="43.13" width="46" />

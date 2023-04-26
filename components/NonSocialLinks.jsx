@@ -1,20 +1,20 @@
 import { getLinksLinks } from "../utils/data";
 
 const NonSocialLinks = () => {
+  const link = getLinksLinks(1);
+
   return (
     <div className="mt-10">
-      <div className="barge flex justify-between item-center mt-5">
-        <div className="button">Link 1</div>
-      </div>
-      <div className="barge flex justify-between item-center mt-5">
-        <div className="button">Link 2</div>
-      </div>
-      <div className="barge flex justify-between item-center mt-5">
-        <div className="button">Link 3</div>
-      </div>
-      <div className="barge flex justify-between item-center mt-5">
-        <div className="button">Link 4</div>
-      </div>
+      {link.map((link) => (
+        <div
+          className="barge flex justify-between item-center mt-5"
+          key={link.id}
+        >
+          <a href={link.url} className="button">
+            {link.title}
+          </a>
+        </div>
+      ))}
     </div>
   );
 };
